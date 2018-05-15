@@ -1,0 +1,17 @@
+<html>
+<head>
+  <title>Welcome</title>
+</head>
+<body>
+  <form action = "/generate" method = "POST">
+    {% csrf_token %}
+    <h3>Random Word (attempt #{{request.session.attempt}})</h1>
+    <h1>{{request.session.random_word|upper}}<h1>
+    <input type = 'submit' name = "submit" placeholder="Generate">
+  </form>
+  <form action = "/reset" method = "POST">
+  <input type = "submit" name "submit" placeholder = "reset" >
+  </form>
+
+</body>
+</html>
