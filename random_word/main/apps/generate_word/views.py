@@ -13,6 +13,6 @@ def generate_a_word(request):
     request.session['attempt'] += 1
     return render(request, 'generate_word/index.html')
 
-# def reset(request):
-#     del request.session['attempt']
-# return redirect('/')
+def reset(request):
+    del request.session['attempt']
+return redirect('/')
